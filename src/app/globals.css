@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../data/**/*.{ts,tsx}";
+
+/* ------------------------------------------------------------------
+   DESIGN TOKENS — minimal premium SaaS. Light ground, deep navy
+   structure, orange used once per section and never twice.
+------------------------------------------------------------------ */
+@theme {
+  /* ground */
+  --color-canvas: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f5f9;
+
+  /* navy scale */
+  --color-navy: #071d49;
+  --color-navy-2: #0a3475;
+  --color-navy-3: #103f91;
+
+  /* text */
+  --color-ink: #071d49;
+  --color-body: #475569;
+  --color-muted: #94a3b8;
+  --color-on-navy: #e2e8f0;
+
+  /* accent */
+  --color-accent: #ff7a00;
+  --color-accent-soft: #fff1e5;
+
+  /* lines */
+  --color-line: #e2e8f0;
+  --color-line-navy: rgba(255, 255, 255, 0.14);
+
+  /* type */
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* radii — 12–14px, per spec */
+  --radius-btn: 0.75rem;
+  --radius-card: 0.875rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-body);
+    font-family: var(--font-body);
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   TYPE SCALE — fluid, but landing on the spec at desktop.
+------------------------------------------------------------------ */
+@utility text-hero {
+  font-size: clamp(2.75rem, 6vw, 4.5rem); /* → 72px */
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+@utility text-section {
+  font-size: clamp(2rem, 4vw, 3rem); /* → 48px */
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+@utility text-lead {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;
+}
+
+@utility eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ------------------------------------------------------------------
+   SURFACES
+------------------------------------------------------------------ */
+@utility card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s;
+}
+
+@utility card-hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 18px 40px -20px rgba(7, 29, 73, 0.22);
+}
+
+/* The one dark surface: hero + any panel that needs depth. */
+@utility navy-panel {
+  background: linear-gradient(
+    135deg,
+    var(--color-navy) 0%,
+    var(--color-navy-2) 55%,
+    var(--color-navy-3) 100%
+  );
+  color: var(--color-on-navy);
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(7, 29, 73, 0.07) 1px,
+    transparent 0
+  );
+  background-size: 28px 28px;
+}
+
+/* ------------------------------------------------------------------
+   ANIMATION
+------------------------------------------------------------------ */
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  /* Scroll-reveal wrappers are server-rendered at opacity 0 for the animated
+     path. With reduced motion there is no animation to bring them in, so
+     force them visible here — CSS wins even if hydration leaves the inline
+     style untouched. */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
