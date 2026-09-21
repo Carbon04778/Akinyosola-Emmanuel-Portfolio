@@ -1,4 +1,22 @@
 /**
+ * Public URL of the deployed site, used for metadata, sitemap.xml and
+ * robots.txt. Resolution order:
+ *   1. NEXT_PUBLIC_SITE_URL — set it once you have a custom domain
+ *   2. VERCEL_PROJECT_PRODUCTION_URL — Vercel injects this automatically,
+ *      so a fresh Vercel deploy is correct with no config at all
+ *   3. localhost — for `npm run dev` / local builds
+ * Empty strings count as unset (an empty env var on Vercel must not break
+ * the build), and a trailing slash is stripped.
+ */
+function resolveSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/+$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (vercel) return `https://${vercel}`;
+  return "http://localhost:3000";
+}
+
+/**
  * ONE place for who you are. Everything else — nav, footer, metadata,
  * contact section, SEO, sitemap — reads from here.
  *
@@ -11,12 +29,8 @@ export const site = {
   shortName: "Emmanuel",
   role: "Full-Stack Developer · AI MVP Builder",
   tagline: "I build full-stack products and AI MVPs — fast.",
-  /**
-   * Public URL of the deployed site. Set NEXT_PUBLIC_SITE_URL in your
-   * hosting env (Vercel → Settings → Environment Variables) so metadata,
-   * sitemap.xml and robots.txt point at the real domain.
-   */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://akinyosola-emmanuel.vercel.app",
+  /** See resolveSiteUrl() above. */
+  url: resolveSiteUrl(),
   email: "akinyosolaemmanuel9@gmail.com",
   available: true,
 

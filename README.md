@@ -67,7 +67,7 @@ contact shadow is baked once.
 3. **Contact form.** Get a free key at web3forms.com, put it in `.env.local` as
    `NEXT_PUBLIC_WEB3FORMS_KEY` (see `.env.example`), and add the same variable on
    Vercel. Until then the form falls back to a pre-filled `mailto:`.
-4. **Site URL.** Set `NEXT_PUBLIC_SITE_URL` to your real domain so OpenGraph,
-   sitemap and robots point at it.
+4. **Site URL.** On Vercel this is automatic (it uses the project's production
+   URL). Only set `NEXT_PUBLIC_SITE_URL` once you attach a custom domain.
 5. **Real content.** `projects.ts` holds the 8 real sites (confirm `platform` and add real numbers to `results`). `testimonials.ts` and `public/reviews/` are still clearly-marked examples — swap in real quotes and review screenshots.
 6. `npm run check` must pass clean.
