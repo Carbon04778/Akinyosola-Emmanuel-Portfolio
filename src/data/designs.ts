@@ -22,6 +22,8 @@ export type Design = {
   image: string;
   width: number;
   height: number;
+  /** Canvas colour the artboard floats on — pulled from the design's own palette. */
+  tint: string;
   /** Shown on the home page (pick a balanced mix of kinds). */
   featured?: boolean;
 };
@@ -42,6 +44,7 @@ export const designs: Design[] = [
     image: "/designs/merlin-booking-dashboard.webp",
     width: 680,
     height: 668,
+    tint: "#e8ede7",
     featured: true,
   },
   {
@@ -54,6 +57,7 @@ export const designs: Design[] = [
     image: "/designs/transport-logistics.webp",
     width: 506,
     height: 680,
+    tint: "#fdece1",
     featured: true,
   },
   {
@@ -66,6 +70,7 @@ export const designs: Design[] = [
     image: "/designs/realestate-app-onboarding.webp",
     width: 680,
     height: 537,
+    tint: "#fdf0d9",
     featured: true,
   },
   {
@@ -78,6 +83,7 @@ export const designs: Design[] = [
     image: "/designs/digital-agency.webp",
     width: 504,
     height: 680,
+    tint: "#fdece4",
     featured: true,
   },
   {
@@ -90,6 +96,7 @@ export const designs: Design[] = [
     image: "/designs/savour-auth.webp",
     width: 680,
     height: 537,
+    tint: "#fbe9e2",
     featured: true,
   },
   {
@@ -102,6 +109,7 @@ export const designs: Design[] = [
     image: "/designs/marlin-motors.webp",
     width: 532,
     height: 680,
+    tint: "#e7ecf5",
     featured: true,
   },
   {
@@ -114,6 +122,7 @@ export const designs: Design[] = [
     image: "/designs/conroys-flowers.webp",
     width: 532,
     height: 680,
+    tint: "#efe9fb",
   },
   {
     slug: "vantage-consulting",
@@ -125,6 +134,7 @@ export const designs: Design[] = [
     image: "/designs/vantage-consulting.webp",
     width: 484,
     height: 680,
+    tint: "#f4efe2",
   },
   {
     slug: "realestate-app-listing",
@@ -136,6 +146,7 @@ export const designs: Design[] = [
     image: "/designs/realestate-app-listing.webp",
     width: 680,
     height: 537,
+    tint: "#fdf3de",
   },
   {
     slug: "turf-booking-onboarding",
@@ -147,6 +158,7 @@ export const designs: Design[] = [
     image: "/designs/turf-booking-onboarding.webp",
     width: 680,
     height: 537,
+    tint: "#e6f3ea",
   },
   {
     slug: "marketing-agency",
@@ -158,6 +170,7 @@ export const designs: Design[] = [
     image: "/designs/marketing-agency.webp",
     width: 488,
     height: 680,
+    tint: "#f0e9fb",
   },
   {
     slug: "business-consulting",
@@ -169,6 +182,7 @@ export const designs: Design[] = [
     image: "/designs/business-consulting.webp",
     width: 488,
     height: 680,
+    tint: "#e6f1ee",
   },
   {
     slug: "riverstone-haven",
@@ -180,6 +194,7 @@ export const designs: Design[] = [
     image: "/designs/riverstone-haven.webp",
     width: 461,
     height: 680,
+    tint: "#f8e9e4",
   },
   {
     slug: "dealership-app-vehicle",
@@ -191,6 +206,7 @@ export const designs: Design[] = [
     image: "/designs/dealership-app-vehicle.webp",
     width: 680,
     height: 537,
+    tint: "#e6eaf0",
   },
   {
     slug: "marlin-realty",
@@ -202,6 +218,7 @@ export const designs: Design[] = [
     image: "/designs/marlin-realty.webp",
     width: 488,
     height: 680,
+    tint: "#f8e7ef",
   },
   {
     slug: "realestate-app-profile",
@@ -213,6 +230,7 @@ export const designs: Design[] = [
     image: "/designs/realestate-app-profile.webp",
     width: 680,
     height: 537,
+    tint: "#fdf3de",
   },
   {
     slug: "transport-logistics-v2",
@@ -224,6 +242,7 @@ export const designs: Design[] = [
     image: "/designs/transport-logistics-v2.webp",
     width: 484,
     height: 680,
+    tint: "#fdece1",
   },
 ];
 
