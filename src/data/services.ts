@@ -64,6 +64,18 @@ export const services: Service[] = [
     tier: "support",
   },
   {
+    title: "Domains, Hosting & Email",
+    body: "Buying or transferring a domain, pointing DNS at your new site, SSL, and getting professional email working — across Vercel, Hostinger, GoDaddy, Namecheap, Cloudflare, WordPress, Squarespace and Carrd.",
+    outcome: "Your site on your own domain, with email that works",
+    tier: "support",
+  },
+  {
+    title: "WordPress & Site Builders",
+    body: "Sites on WordPress, Squarespace or Carrd when a CMS your team can edit beats custom code — or moving an AI-built app onto one of them (or off it) without losing content or SEO.",
+    outcome: "A site your team can update without calling a developer",
+    tier: "support",
+  },
+  {
     title: "Deployment & Migration",
     body: "Vercel, Supabase, Railway, environments, CI, secrets. Or moving off a platform you've outgrown with your code and data intact.",
     outcome: "You own your product and your infrastructure",

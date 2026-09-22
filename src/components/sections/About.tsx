@@ -5,23 +5,38 @@ import { Counter } from "@/components/ui/Counter";
 import { Button } from "@/components/ui/Button";
 import { hasFiverr, site } from "@/lib/site";
 
+/** Grouped so the chips read in a sensible order, not alphabetically. */
 const stack = [
+  // AI build platforms
   "Claude Code",
   "VS Code",
   "Lovable",
   "Base44",
   "Replit",
+  // code
   "Next.js",
   "React",
   "TypeScript",
   "Node",
+  "Astro",
+  "Vite",
   "Tailwind",
+  // data, payments, AI
   "Supabase",
   "PostgreSQL",
   "Stripe",
+  "Shopify",
   "Claude API",
   "OpenAI API",
+  // site builders & CMS
+  "WordPress",
+  "Squarespace",
+  "Carrd",
+  // hosting, domains & automation
   "Vercel",
+  "Hostinger",
+  "GoDaddy",
+  "Domains & DNS",
   "n8n",
   "Git & GitHub",
   "Figma",
