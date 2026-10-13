@@ -15,7 +15,6 @@ const SPY_IDS = [
   "design",
   "process",
   "testimonials",
-  "reviews",
   "faq",
   "contact",
 ];

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description:
-    "Full-stack developer and AI MVP builder. I design and ship production web apps and AI products with Claude Code, Lovable, Base44, Replit and VS Code — MVPs, SaaS, dashboards, AI agents and integrations. Available on Upwork and Fiverr.",
+    "Full-stack developer and AI MVP builder. I design and ship production web apps and AI products with Claude Code, Lovable, Base44, Replit and VS Code — MVPs, SaaS, dashboards, AI agents and integrations. Available for hire on Upwork.",
   keywords: [
     "full stack developer",
     "AI MVP developer",

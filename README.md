@@ -2,7 +2,7 @@
 
 Full-stack developer and AI MVP builder. Ships production web apps and AI
 products with **Claude Code (in VS Code), Lovable, Base44 and Replit**.
-Available on Upwork and Fiverr.
+Available for hire on Upwork.
 
 ## Run it
 
@@ -49,25 +49,24 @@ contact shadow is baked once.
 
 | I want to… | Edit |
 |---|---|
-| Name, email, Upwork/Fiverr/X links, nav, stats | `src/lib/site.ts` |
+| Name, email, Upwork/X links, nav, stats | `src/lib/site.ts` |
 | Add a design concept | `src/data/designs.ts` + a WebP in `public/designs/` (exact width/height). Shows on the home Design section (`featured: true`) and at `/design`. |
 | Add a project | `src/data/projects.ts` — home showcase, `/portfolio`, filters, search and case-study pages all read from this one array. `featured: true` for the home page. |
 | Change services | `src/data/services.ts` (`tier: "build"` shows first) |
 | Platform copy | `src/data/platforms.ts` |
 | Testimonials | `src/data/testimonials.ts` |
-| Review screenshots | `src/data/reviews.ts` + `public/reviews/` |
 | FAQ | `src/data/faq.ts` |
 | Process steps | `src/data/process.ts` |
 | Colours, fonts, type scale | `@theme` in `src/app/globals.css` |
 
 ## Before launch — checklist
 
-1. **Links.** In `src/lib/site.ts`, replace the `TODO` URLs (Fiverr, X, GitHub, LinkedIn).
+1. **Links.** In `src/lib/site.ts`, fill the empty `socials` URLs you want shown (GitHub, LinkedIn). Empty ones are simply not rendered.
 2. **Your photo.** Replace `src/assets/portrait.jpg` with a 4:5 portrait (~1200×1500). It is a static import, so the URL is content-hashed and a new photo can never be served stale from the image cache.
 3. **Contact form.** Get a free key at web3forms.com, put it in `.env.local` as
    `NEXT_PUBLIC_WEB3FORMS_KEY` (see `.env.example`), and add the same variable on
    Vercel. Until then the form falls back to a pre-filled `mailto:`.
 4. **Site URL.** On Vercel this is automatic (it uses the project's production
    URL). Only set `NEXT_PUBLIC_SITE_URL` once you attach a custom domain.
-5. **Real content.** `projects.ts` holds the 8 real sites (confirm `platform` and add real numbers to `results`). `testimonials.ts` and `public/reviews/` are still clearly-marked examples — swap in real quotes and review screenshots.
+5. **Real content.** `projects.ts` holds the 8 real sites (confirm `platform` and add real numbers to `results`). `testimonials.ts` is still clearly-marked example copy — swap in real Upwork quotes.
 6. `npm run check` must pass clean.

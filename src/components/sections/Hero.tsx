@@ -39,7 +39,7 @@ export function Hero() {
             />
             <span className="text-sm font-medium text-on-navy">
               {site.available
-                ? "Available on Upwork & Fiverr"
+                ? "Available for new projects"
                 : "Booked — join the waitlist"}
             </span>
           </motion.div>

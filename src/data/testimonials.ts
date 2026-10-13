@@ -3,7 +3,7 @@ export type Testimonial = {
   name: string;
   role: string;
   /** Where the review came from — shown as a small chip. */
-  source: "Upwork" | "Fiverr" | "Direct";
+  source: "Upwork";
   /** Drop a photo at /public/clients/<file> to replace the initials avatar. */
   avatar?: string;
   rating: number;
@@ -11,7 +11,7 @@ export type Testimonial = {
 
 /*
  * ⚠️ EXAMPLE COPY — replace with real client quotes.
- * Copy the exact wording from your Upwork / Fiverr reviews (that's allowed —
+ * Copy the exact wording from your Upwork reviews (that's allowed —
  * it's your feedback), set `source` to where it came from, and use the
  * client's first name + initial unless they've agreed to their full name.
  */
@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
       "Fast, clear, and he explains what he's doing in language I understand. I never once had to chase him for an update.",
     name: "S. Ibrahim",
     role: "Agency owner",
-    source: "Fiverr",
+    source: "Upwork",
     rating: 5,
   },
   {
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
       "Our Lovable app broke the day before a demo. He found the actual problem in an hour and had it fixed and deployed the same evening.",
     name: "J. Whitfield",
     role: "Solo founder",
-    source: "Fiverr",
+    source: "Upwork",
     rating: 5,
   },
 ];

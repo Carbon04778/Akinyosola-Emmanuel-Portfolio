@@ -3,7 +3,7 @@ import portrait from "@/assets/portrait.jpg";
 import { Reveal } from "@/components/ui/Reveal";
 import { Counter } from "@/components/ui/Counter";
 import { Button } from "@/components/ui/Button";
-import { hasFiverr, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 /** Grouped so the chips read in a sensible order, not alphabetically. */
 const stack = [
@@ -118,21 +118,6 @@ export function About() {
                 >
                   Upwork
                 </a>
-                {hasFiverr ? (
-                  <>
-                    {" "}and{" "}
-                    <a
-                      href={site.hire.fiverr}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
-                    >
-                      Fiverr
-                    </a>
-                  </>
-                ) : (
-                  " and Fiverr"
-                )}
                 , or{" "}
                 <a
                   href={`mailto:${site.email}`}

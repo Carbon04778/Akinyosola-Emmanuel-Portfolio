@@ -89,7 +89,7 @@ export const services: Service[] = [
   },
   {
     title: "Ongoing Development",
-    body: "Retainer-style support after launch: new features, fixes, upgrades and monitoring, on Upwork or Fiverr so the paperwork is already handled.",
+    body: "Retainer-style support after launch: new features, fixes, upgrades and monitoring, on Upwork so contracts, milestones and payments are already handled.",
     outcome: "A developer who already knows your codebase",
     tier: "support",
   },

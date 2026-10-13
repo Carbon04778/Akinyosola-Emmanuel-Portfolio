@@ -23,6 +23,6 @@ export const process = [
   {
     step: "05",
     title: "Ship and hand over",
-    body: "Deployed, documented, and yours. You own the code and the accounts. I'm around afterwards on Upwork or Fiverr if you want me.",
+    body: "Deployed, documented, and yours. You own the code and the accounts. I'm around afterwards on Upwork if you want me.",
   },
 ];

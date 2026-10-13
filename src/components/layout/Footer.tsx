@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { activeSocials, hasFiverr, site } from "@/lib/site";
+import { activeSocials, site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -14,7 +14,7 @@ export function Footer() {
             <p className="mt-2 text-sm text-on-navy/60">{site.name}</p>
             <p className="mt-4 max-w-xs text-base text-on-navy/70">
               Full-stack developer and AI MVP builder. Available for hire on
-              Upwork and Fiverr, or reach me by email.
+              Upwork, or reach me by email.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <a
@@ -25,16 +25,6 @@ export function Footer() {
               >
                 Hire me on Upwork ↗
               </a>
-              {hasFiverr && (
-                <a
-                  href={site.hire.fiverr}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="rounded-lg border border-white/25 px-4 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10"
-                >
-                  Fiverr ↗
-                </a>
-              )}
               <a
                 href={`mailto:${site.email}`}
                 className="rounded-lg border border-white/25 px-4 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10"

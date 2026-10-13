@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Reveal } from "@/components/ui/Reveal";
-import { activeSocials, hasFiverr, site } from "@/lib/site";
+import { activeSocials, site } from "@/lib/site";
 
 const projectTypes = [
   "AI MVP",
@@ -135,16 +135,6 @@ export function Contact() {
                     >
                       Upwork ↗
                     </a>
-                    {hasFiverr && (
-                      <a
-                        href={site.hire.fiverr}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-ink/25"
-                      >
-                        Fiverr ↗
-                      </a>
-                    )}
                     <a
                       href={`mailto:${site.email}`}
                       className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2.5 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-ink/25"

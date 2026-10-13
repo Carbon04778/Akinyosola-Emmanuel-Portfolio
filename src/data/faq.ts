@@ -24,8 +24,8 @@ export const faqs = [
     a: "Yes — that's a large part of what I do. Send the repository, the preview link, or even a screenshot of the error. I'll tell you what's actually wrong before you commit to anything.",
   },
   {
-    q: "How do we work together — Upwork, Fiverr, or direct?",
-    a: "Any of the three. Upwork is where most of my clients hire me and it handles contracts, milestones and payment protection. Fiverr works well for smaller, well-defined jobs. Direct is fine for ongoing work once we know each other. Use the contact form and I'll point you to the right one.",
+    q: "How do we work together?",
+    a: "Through Upwork. It handles the contract, the milestones and payment protection for both of us, so you're never paying for work you haven't seen. Send me a message through the form here or straight through my Upwork profile and we'll scope it from there.",
   },
   {
     q: "Can you take over a project someone else started?",

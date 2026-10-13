@@ -34,13 +34,9 @@ export const site = {
   email: "akinyosolaemmanuel9@gmail.com",
   available: true,
 
-  /**
-   * Where clients hire me. Upwork is primary. Fiverr buttons appear
-   * automatically once a URL is added here.
-   */
+  /** Where clients hire me. Upwork only. */
   hire: {
     upwork: "https://www.upwork.com/freelancers/~01da564cdc07f9f699",
-    fiverr: "", // paste your Fiverr profile URL to show the Fiverr buttons
   },
 
   /** Shown in the footer and contact section. Empty href = hidden. */
@@ -72,6 +68,3 @@ export const site = {
 
 /** Only the socials that actually have a link. */
 export const activeSocials = site.socials.filter((s) => s.href !== "");
-
-/** True once a Fiverr URL has been added. */
-export const hasFiverr = site.hire.fiverr !== "";
