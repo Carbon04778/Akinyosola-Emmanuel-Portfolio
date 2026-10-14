@@ -1,4 +1,4 @@
-export type Category = "Business Website" | "Nonprofit" | "Web App";
+export type Category = "Business Website" | "Migration" | "Nonprofit" | "Web App";
 
 export type Project = {
   slug: string;
@@ -35,6 +35,52 @@ export type Project = {
    numbers (bookings, donations, traffic) whenever you have them.
 ------------------------------------------------------------------ */
 export const projects: Project[] = [
+  {
+    slug: "thatso-germany",
+    title: "That'so Germany — WordPress → Base44",
+    summary:
+      "A German cosmetics brand's full catalogue site migrated off WordPress onto Base44 — rebuilt 1:1, down to the last section — with the live domain moved across.",
+    category: "Migration",
+    platform: "Base44",
+    year: 2026,
+    tags: ["Base44", "WordPress migration", "1:1 rebuild", "Domain & DNS", "Cloudflare", "German"],
+    challenge:
+      "That'so Germany sells tanning sprays, creams and mousse through a multi-level catalogue — Geräte, Homekosmetik, Beauty Espresso, Professional, Beautylinie — plus the legal pages German sites are required to carry (AGB, Datenschutz, Impressum). It all lived on WordPress, with the maintenance and plugin overhead that brings. They wanted off it without losing a single page, and without their customers noticing anything had changed.",
+    solution:
+      "Rebuilt the entire site on Base44 to match the original 1:1 — the hero carousel, every dropdown in the navigation, the full product catalogue and each legal page, in German throughout. Then cut the live domain over to the new site with DNS behind Cloudflare, so the switch happened without downtime and every existing URL kept working.",
+    results: [
+      "Every page rebuilt 1:1 — nothing dropped in the move",
+      "Off WordPress: no plugins, no update treadmill",
+      "Domain moved with no downtime · thatso-germany.de",
+    ],
+    cover: ["#1c1917", "#c2956a"],
+    image: "/projects/thatso-germany.webp",
+    liveUrl: "https://thatso-germany.de/",
+    featured: true,
+  },
+  {
+    slug: "warm-hearth",
+    title: "A Warm Hearth",
+    summary:
+      "A direct-booking site for a storybook cottage in Virginia — built on Carrd at the client's request, with their Porkbun domain connected.",
+    category: "Business Website",
+    platform: "Carrd",
+    year: 2026,
+    tags: ["Carrd", "Direct booking", "Domain & DNS", "Porkbun", "Hospitality", "Copywriting"],
+    challenge:
+      "The owners of a one-of-a-kind hillside cottage near Lexington were sending every guest through Airbnb and losing the service fee on each booking. They wanted their own site to take direct reservations — and they specifically wanted it on Carrd, so it would stay cheap and simple to run once I handed it over.",
+    solution:
+      "Built the whole thing on Carrd as asked: a photo-led hero, a clear 'book direct and skip the Airbnb fee' pitch, the cottage story, a gallery, a full amenities list, the artisan workshop experiences with pricing, the cancellation policy and a direct enquiry path. Then connected their Porkbun domain and pointed DNS at it.",
+    results: [
+      "Direct bookings without Airbnb's guest service fee",
+      "Workshop experiences presented and priced alongside the stay",
+      "Porkbun domain connected · warmhearthfairfield.com",
+    ],
+    cover: ["#1f2a1c", "#b07d4a"],
+    image: "/projects/warm-hearth.webp",
+    liveUrl: "https://warmhearthfairfield.com/",
+    featured: true,
+  },
   {
     slug: "k9-claw",
     title: "K9 Claw",
@@ -78,7 +124,6 @@ export const projects: Project[] = [
     cover: ["#1c1917", "#ff7a00"],
     image: "/projects/eustress-and-demeter.webp",
     liveUrl: "https://www.eustressanddemeter.com/",
-    featured: true,
   },
   {
     slug: "art-future-club",
@@ -124,7 +169,6 @@ export const projects: Project[] = [
     cover: ["#3f2a14", "#ff7a00"],
     image: "/projects/lead-futures-foundation.webp",
     liveUrl: "https://www.leadfuturesfoundation.org/",
-    featured: true,
   },
   {
     slug: "evokicks",
@@ -218,7 +262,7 @@ export const projects: Project[] = [
 
 export const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
 
-export const categories: Category[] = ["Business Website", "Web App", "Nonprofit"];
+export const categories: Category[] = ["Business Website", "Migration", "Web App", "Nonprofit"];
 
 export function getProject(slug: string) {
   return projects.find((p) => p.slug === slug);

@@ -68,5 +68,5 @@ contact shadow is baked once.
    Vercel. Until then the form falls back to a pre-filled `mailto:`.
 4. **Site URL.** On Vercel this is automatic (it uses the project's production
    URL). Only set `NEXT_PUBLIC_SITE_URL` once you attach a custom domain.
-5. **Real content.** `projects.ts` holds the 8 real sites (confirm `platform` and add real numbers to `results`). `testimonials.ts` is still clearly-marked example copy — swap in real Upwork quotes.
+5. **Real content.** `projects.ts` holds the 10 real sites (confirm `platform` and add real numbers to `results`). `testimonials.ts` is still clearly-marked example copy — swap in real Upwork quotes.
 6. `npm run check` must pass clean.

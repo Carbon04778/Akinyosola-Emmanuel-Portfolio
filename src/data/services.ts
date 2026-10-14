@@ -76,6 +76,12 @@ export const services: Service[] = [
     tier: "support",
   },
   {
+    title: "Site Migration, 1:1",
+    body: "Moving an existing site to a new platform — WordPress off to Base44, or anywhere else — rebuilt page for page so nothing is lost, then the live domain cut over without downtime.",
+    outcome: "The same site, somewhere better, and nobody noticed the switch",
+    tier: "support",
+  },
+  {
     title: "Deployment & Migration",
     body: "Vercel, Supabase, Railway, environments, CI, secrets. Or moving off a platform you've outgrown with your code and data intact.",
     outcome: "You own your product and your infrastructure",
